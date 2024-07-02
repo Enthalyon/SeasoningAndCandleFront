@@ -1,0 +1,113 @@
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  background: #ffbf00;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    &-title {
+      width: 100%;
+
+      font-family: "Inter", sans-serif;
+      color: #9e0c1d;
+      text-align: center;
+      font-family: Inter;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      margin-bottom: 40px;
+    }
+
+    &-description {
+      width: 340;
+      margin-inline: 115px;
+
+      text-align: center;
+      color: #9e0c1d;
+      font-family: "Inter", sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-inputs {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-block: 67px 51px;
+      gap: 41px;
+
+      &-field {
+        margin-inline: 60px;
+        box-sizing: border-box;
+        //font-family: "Inter", sans-serif;
+        border-radius: 11px;
+        border: 1px solid #000;
+        background: #fff;
+        width: 453px;
+        max-width: 453px;
+        height: 40px;
+        flex-shrink: 0;
+
+        //* Text styles
+        padding-left: 24px;
+        font-family: "Inter", sans-serif;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        &::placeholder {
+          font-family: "Inter", sans-serif;
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+
+    &-buttons {
+      display: inline-flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      &-sign-in {
+        margin-inline: 190px;
+
+        width: 192px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #9e0c1d;
+        background: #9e0c1d;
+        color: #E1F7F5;
+
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      &-sign-up {
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
