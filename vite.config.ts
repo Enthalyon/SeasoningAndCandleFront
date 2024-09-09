@@ -13,6 +13,7 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
       "@assets": resolve(__dirname, "src/assets"),
       "@views": resolve(__dirname, "src/views"),
+      "@services": resolve(__dirname, "src/services"),
     },
   },
 });

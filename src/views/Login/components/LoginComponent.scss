@@ -84,6 +84,7 @@
 
       &-sign-in {
         margin-inline: 190px;
+        cursor: pointer;
 
         width: 192px;
         height: 40px;
@@ -100,6 +101,7 @@
       }
 
       &-sign-up {
+        cursor: pointer;
         color: #000;
         font-family: "Inter", sans-serif;
         font-size: 16px;
