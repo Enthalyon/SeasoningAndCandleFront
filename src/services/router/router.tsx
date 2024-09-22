@@ -10,6 +10,15 @@ type RemixRouter = ReturnType<typeof createBrowserRouter>;
 export const Router: RemixRouter = createBrowserRouter(
 	[
 		{
+			id: 'default-view',
+			path: '/',
+			element: (
+				<Suspense fallback={<div>Loading...</div>}>
+						<LoginView />
+				</Suspense>
+			),
+		},
+		{
 			id: 'login-view',
 			path: '/login',
 			element: (
