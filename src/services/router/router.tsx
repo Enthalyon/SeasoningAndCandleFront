@@ -9,8 +9,8 @@ type RemixRouter = ReturnType<typeof createBrowserRouter>;
 
 export const Router: RemixRouter = createBrowserRouter(
 	[
-		{
-			id: 'default-view',
+    {
+			id: 'default-login-view',
 			path: '/',
 			element: (
 				<Suspense fallback={<div>Loading...</div>}>

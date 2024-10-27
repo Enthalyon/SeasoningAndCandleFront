@@ -22,7 +22,7 @@ const RegisterView = () => {
           <p className="form__description">¡Estamos esperando tu primera orden!</p>
           <hr className="form__separator" />
           <div className="form__inputs">
-            <InputComponent placeholder="Nombres..." />
+            <InputComponent placeholder="Nombres..." type="password" />
             <InputComponent placeholder="Apellidos..." />
             <InputComponent placeholder="Correo electrónico..." />
             <InputComponent placeholder="Dirección de domicilio..." />
