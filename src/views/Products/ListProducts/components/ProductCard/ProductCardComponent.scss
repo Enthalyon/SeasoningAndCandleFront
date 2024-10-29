@@ -1,0 +1,52 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 300px;
+  padding: 15px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #9E0C1D;
+  background: #FF9A00;
+  box-shadow:  0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+  &__image {
+    align-self: stretch;
+    border-radius: 8px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__title {
+    color: #9E0C1D;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  &__divider {
+    width: 100%;
+    border: 0px;
+    border-top: 1px solid #9E0C1D;
+    background: #9E0C1D;
+  }
+
+  &__description {
+    max-height: 3lh;
+    font-size: 14px;
+    font-weight: 400;
+    //TODO: Fix error to view ellipsis
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+  }
+}

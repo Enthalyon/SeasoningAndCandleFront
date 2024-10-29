@@ -1,0 +1,48 @@
+.button-icon {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+
+    &--small {
+      height: 32px;
+      width: 32px;
+    }
+
+    &--medium {
+      height: 40px;
+      width: 40px;
+    }
+
+    &--large {
+      height: 48px;
+      width: 48px;
+    }
+
+    &--full-height {
+      height: 100%;
+      width: 50px;
+    }
+
+    &--primary {
+      background-color: rgba(158, 12, 29, 1);
+      &:hover {
+        background-color: rgba(124, 36, 46, 0.8);
+      }
+    }
+
+    &--tertiary {
+      background-color: rgba(124, 36, 46, 0);
+      &:hover {
+        background-color: rgba(124, 36, 46, 0.2);
+      }
+    }
+  }
+}

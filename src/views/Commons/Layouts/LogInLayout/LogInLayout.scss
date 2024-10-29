@@ -1,0 +1,24 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  //TODO: TEST MARGIN AUTO BEFORE DELETE THIS LINE
+  //justify-content: space-between;
+
+  &__header {
+    width: 100%;
+    height: 70px;
+    //TODO: STICKY HEADER
+  }
+
+  &__footer {
+    margin-top: auto;
+    align-self: flex-end;
+    justify-self: end;
+    display: flex;
+    width: 100%;
+    height: 70px;
+  }
+}

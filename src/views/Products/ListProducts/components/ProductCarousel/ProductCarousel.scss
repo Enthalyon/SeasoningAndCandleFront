@@ -1,0 +1,19 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    color: #9E0C1D;
+  }
+
+  &__cards {
+    display: flex;
+    flex: row;
+    gap: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+}
