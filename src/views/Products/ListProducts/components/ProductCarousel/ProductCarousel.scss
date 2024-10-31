@@ -3,17 +3,40 @@
   flex-direction: column;
 
   &__title {
+    margin-left: 20px;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
     color: #9E0C1D;
   }
 
-  &__cards {
+  .cards-container {
     display: flex;
-    flex: row;
-    gap: 15px;
-    overflow: hidden;
-    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    &__button {
+      height: 277px;
+      position: absolute;
+      z-index: 1;
+
+      &:first-child {
+        left: 40px;
+      }
+
+      &:last-child {
+        right: 40px;
+      }
+    }
+
+    &__cards {
+      display: flex;
+      flex: row;
+      gap: 15px;
+      overflow: hidden;
+      position: relative;
+    }
   }
 }

@@ -18,7 +18,7 @@ const ButtonIcon: FC<ButtonIconProps> = ({
 }) => {
   return (
     <>
-      <div
+      <button
         className={`button-icon__container button-icon__container--${
           size ?? "small"
         } button-icon__container--${color ?? "primary"}`}
@@ -26,7 +26,7 @@ const ButtonIcon: FC<ButtonIconProps> = ({
         style={customStyle}
       >
         <img className="button-icon__image" src={icon} />
-      </div>
+      </button>
       <style>{`
         ${styles}
       `}</style>

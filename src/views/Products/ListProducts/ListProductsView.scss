@@ -1,5 +1,8 @@
-.cards-container {
-  //TODO: GIVE STYLES
-  background: #FFBF00;
-  padding: 20px;
+.cards {
+  &-container {
+    //TODO: GIVE STYLES
+    height: 100%;
+    background: #FFBF00;
+    padding: 30px 20px;
+  }
 }

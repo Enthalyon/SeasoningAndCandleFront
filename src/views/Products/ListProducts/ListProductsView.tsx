@@ -1,10 +1,10 @@
 import LogInLayout from "@/views/Commons/Layouts/LogInLayout/LogInLayout"
 import styles from './ListProductsView.scss?inline'
 import ProductCarousel from "./components/ProductCarousel/ProductCarousel"
-import { productCategoryList } from "@/mocks/productMocks";
+import useProduct from "@/hook/useProduct";
 
 const ListProductsView = () => {
-  const productsFromAPI = productCategoryList;
+  const { productCategoryList } = useProduct();
 
   return (
     <LogInLayout>
@@ -12,7 +12,7 @@ const ListProductsView = () => {
         <div className="cards">
           <div className="cards-container">
             {
-              productsFromAPI.map((productCategory) => (
+              productCategoryList.map((productCategory) => (
                 <ProductCarousel key={productCategory.categoryId} {...productCategory} />
               ))
             }

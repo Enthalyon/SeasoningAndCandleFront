@@ -1,14 +1,15 @@
 import styles from "./ProductCarousel.scss?inline";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { ProductCategory } from "@/types/productTypes";
 import ProductCardComponent from "../ProductCard/ProductCardComponent";
 import { arrowLeft, arrowRight } from "@/assets/Products";
 import ButtonIcon from "@/views/Commons/Components/ButtonIcon/ButtonIcon";
 
 const ProductCarousel: FC<ProductCategory> = ({ categoryName, products }) => {
+  const carouselCards = useRef<HTMLDivElement>(null);
 
   const onMoveCarousel = (direction: "right" | "left") => {
-    const carousel = document.querySelector(".carousel-container__cards");
+    const carousel = carouselCards.current;
     if (!carousel) return;
 
     const cardWidth = carousel.children[0].clientWidth;
@@ -24,21 +25,21 @@ const ProductCarousel: FC<ProductCategory> = ({ categoryName, products }) => {
   return (
     <>
       <div className="carousel-container">
-        <span className="carousel-container__title">
-          <h2>{categoryName}</h2>
-        </span>
-        <div className="">
-          <div className="carousel-container__cards">
+        <span className="carousel-container__title">{categoryName}</span>
+        <div className="cards-container">
+          <div className="cards-container__button" style={{}}>
             <ButtonIcon
               size="full-height"
               icon={arrowLeft}
               color="tertiary"
               onClick={() => onMoveCarousel("left")}
               customStyle={{
-                position: "fixed",
-                height: "274px",
+                position: "absolute",
+                borderRadius: "10px 0 0 10px",
               }}
             />
+          </div>
+          <div ref={carouselCards} className="cards-container__cards">
             {products.map(({ id, name, imageUrl, description }) => (
               <ProductCardComponent
                 key={id}
@@ -47,14 +48,16 @@ const ProductCarousel: FC<ProductCategory> = ({ categoryName, products }) => {
                 image={imageUrl}
               />
             ))}
+          </div>
+          <div className="cards-container__button">
             <ButtonIcon
               size="full-height"
               icon={arrowRight}
               color="tertiary"
               customStyle={{
                 right: 0,
-                height: "274px",
-                position: "fixed",
+                position: "absolute",
+                borderRadius: "0 10px 10px 0",
               }}
               onClick={() => onMoveCarousel("right")}
             />
